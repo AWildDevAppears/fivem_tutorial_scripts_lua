@@ -17,3 +17,9 @@ AddEventHandler( 'onClientGameTypeStart', function()
     exports.spawnManager:setAutoSpawn( true )
     exports.spawnManager:forceRespawn()
 end )
+
+RegisterCommand( 'car', function( source, args )
+    TriggerEvent( 'chat:addMessage', {
+        args = { 'Prepping to spawn vehicle: ' .. ( args[1] or 'adder' ) } }
+    } )
+end, false )
